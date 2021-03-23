@@ -9,8 +9,8 @@ import shutil
 
 def exit_func(signal, frame):
 	print("exiting")
-	os.system("ffmpeg -r " + fps + " -pattern_type glob -i " + foldername + '"/' + '*.png"' + " -vcodec libx264" + foldername + ".mp4")
-	print("command ran " + "ffmpeg -r " + fps + " -pattern_type glob -i " + foldername + "/" + '*.png' + " -vcodec libx264" + foldername + ".mp4")
+	os.system("ffmpeg -r " + fps + " -pattern_type glob -i " + foldername + '"/' + '*.png"' + " -vcodec libx264 " + foldername + ".mp4")
+	print("command ran " + "ffmpeg -r " + fps + " -pattern_type glob -i " + foldername + "/" + '*.png' + " -vcodec libx264 " + foldername + ".mp4")
 	if remove == "y":
 		shutil.rmtree(foldername)
 	sys.exit()
